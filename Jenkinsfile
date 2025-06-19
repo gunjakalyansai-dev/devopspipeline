@@ -42,6 +42,7 @@ pipeline {
         stage('operate') {
           steps {
             echo 'operate the app'
+            echo 'We can operate the application'
           }
         }
 
