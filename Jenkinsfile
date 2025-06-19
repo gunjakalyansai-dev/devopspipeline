@@ -14,38 +14,32 @@ pipeline {
     }
 
     stage('Build') {
-      parallel {
-        stage('Build') {
-          steps {
-            echo 'build the app '
-          }
-        }
+      steps {
+        echo 'To build the pipeline'
+      }
+    }
 
-        stage('test') {
-          steps {
-            echo 'test the app'
-          }
-        }
+    stage('Test') {
+      steps {
+        echo 'To test the pipeline'
+      }
+    }
 
-        stage('relese') {
-          steps {
-            echo 'release code'
-          }
-        }
+    stage('Release') {
+      steps {
+        echo 'To release the sprint'
+      }
+    }
 
-        stage('deploy') {
-          steps {
-            echo 'deply app'
-          }
-        }
+    stage('Deploy') {
+      steps {
+        echo 'To deploy the application'
+      }
+    }
 
-        stage('operate') {
-          steps {
-            echo 'operate the app'
-            echo 'We can operate the application'
-          }
-        }
-
+    stage('Operate') {
+      steps {
+        echo 'To operate the application'
       }
     }
 
